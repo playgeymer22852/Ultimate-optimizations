@@ -37,6 +37,15 @@ body:
       required: false
 
   - type: input
+    id: os-vendor-source
+    attributes:
+      label: "🏢 Модификация, автор или источник ОС / OS Modification, Vendor or Source"
+      description: "Поскольку у операционных систем бывают тысячи кастомных модификаций, обязательно укажите автора, компанию или сайт, откуда она была скачана. Внимание: ссылки не принимаются! / Since operating systems have thousands of custom modifications, please specify the author, company, or website where it was downloaded. Note: links are not accepted!"
+      placeholder: "Например: Xiaomi (MIUI), кастом от ReviOS, сайт 4PDA... / e.g., Xiaomi (MIUI), custom build by ReviOS, 4PDA website..."
+    validations:
+      required: true
+
+  - type: input
     id: custom-device-launcher
     attributes:
       label: "🕹️ Точная модель устройства и Лаунчер / Exact Device Model & Launcher"

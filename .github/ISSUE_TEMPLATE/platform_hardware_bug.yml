@@ -23,15 +23,24 @@ body:
         - "Linux (Ubuntu, Arch, Fedora etc.)"
         - "MacOS (Intel / Apple Silicon M1/M2/M3)"
         - "Windows (Старый ПК / Специфическое железо)"
-        - "Другое / Other (укажите в поле ниже / specify below)"
+        - "Другое / Other"
     validations:
       required: true
+
+  - type: input
+    id: other-os-details
+    attributes:
+      label: "❓ Если выбрали «Другое» / If you selected 'Other'"
+      description: "Укажите вашу специфическую ОС, дистрибутив или устройство, если его не было в списке выше. / Specify your custom OS, distro, or device if it wasn't listed above."
+      placeholder: "Например: Raspberry Pi, LineageOS, FreeBSD... / e.g., Raspberry Pi, LineageOS..."
+    validations:
+      required: false
 
   - type: input
     id: custom-device-launcher
     attributes:
       label: "🕹️ Точная модель устройства и Лаунчер / Exact Device Model & Launcher"
-      description: "Напишите модель (например: Poco X3, Steam Deck OLED, MacBook Pro) и через какой лаунчер запускаете (PojavLauncher, Prism, Modrinth App). / State the model (e.g., Poco X3, Steam Deck OLED) and the launcher used."
+      description: "Напишите модель (например: Poco X3, Steam Deck OLED, MacBook Pro) и через какой лаунчер запускаете (PojavLauncher, Prism, Modrinth App, HMCL). / State the model (e.g., Poco X3) and the launcher used."
       placeholder: "Например: Poco X3 Pro, PojavLauncher / e.g., Steam Deck, Prism Launcher"
     validations:
       required: true
@@ -40,16 +49,48 @@ body:
     id: hardware-specs
     attributes:
       label: "📼 Видеокарта, встройка и процессор / GPU, Integrated Graphics & CPU"
-      description: "Укажите вашу видеокарту/встройку (Mali-G76, Intel HD 620, RTX 3060) и процессор. / Specify your GPU/Integrated graphics and CPU."
+      description: "Укажите вашу видеокарту/встройку (Mali-G76, Intel HD 620, RTX 3060) и модель процессора. / Specify your GPU/Integrated graphics and CPU model."
       placeholder: "Например: Snapdragon 860, Adreno 640 / e.g., Intel Core i3, Intel HD 520"
     validations:
       required: true
+
+  - type: dropdown
+    id: graphics-api
+    attributes:
+      label: "⚡ Графический движок / Graphics API & Renderer"
+      description: "Какая графическая библиотека или кастомный рендерер используется в лаунчере? (Особенно критично для мобильных лаунчеров и Linux). / Which graphics API or custom renderer is used?"
+      options:
+        - "OpenGL"
+        - "Vulkan"
+        - "VirGL / Zink (Для PojavLauncher)"
+        - "Holy GL4ES (Для PojavLauncher)"
+        - "Не знаю / Not sure"
+    validations:
+      required: true
+
+  - type: input
+    id: driver-version
+    attributes:
+      label: "⚙️ Версия графического драйвера / Graphics Driver Version"
+      description: "Укажите версию драйвера видеокарты или прошивки устройства, если это возможно. / Specify the GPU driver version or device firmware if possible."
+      placeholder: "Например: Mesa 24.1, Nvidia 555.58, Turnip Driver v24... / e.g., Mesa 24.1, Nvidia 555.58..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: performance-metrics
+    attributes:
+      label: "📊 Метрики производительности (FPS / Frame Time) / Performance Metrics"
+      description: "Если проблема в производительности, опишите просадки: какой FPS выдает игра, есть ли дикие микрофризы, задержки ввода (Input Lag) и т.д. / If the issue is performance-related, describe the drops, average FPS, or input lag."
+      placeholder: "Например: FPS падает со 120 до 15 при повороте камеры, время кадра прыгает... / e.g., FPS drops from 120 to 15 when turning the camera..."
+    validations:
+      required: false
 
   - type: textarea
     id: hardware-bug-description
     attributes:
       label: "📝 Полное описание проблемы / Full Description of the Issue"
-      description: "Опишите, что именно идет не так конкретно на вашем устройстве (артефакты графики, вылет при загрузке, зависание). / Describe what exactly goes wrong on your device (graphic artifacts, crash on load, freezing)."
+      description: "Подробно опишите, что именно идет не так (визуальные артефакты, текстуры ломаются, игра намертво зависает, вылетает). / Describe what exactly goes wrong (visual artifacts, broken textures, freezing, crashing)."
       placeholder: "Опишите баг... / Describe the bug..."
     validations:
       required: true
@@ -58,7 +99,7 @@ body:
     id: device-logs
     attributes:
       label: "📋 Логи и краш-репорты устройства / Device Logs and Crash Reports"
-      description: "Прикрепите содержимое файлов `latest.log` или краш-репорт лаунчера. Вы можете просто перетащить файл сюда. / Attach the contents of `latest.log` or launcher crash report. You can drag and drop files here."
+      description: "Прикрепите содержимое файлов `latest.log`, `hs_err_pid` или краш-репорт лаунчера. Вы можете просто перетащить файл сюда. / Attach the contents of `latest.log`, `hs_err_pid`, or launcher crash report."
       placeholder: "Вставьте логи сюда... / Paste logs here..."
     validations:
       required: true
@@ -68,5 +109,5 @@ body:
     attributes:
       label: "⏳ Подтверждение / Confirmation"
       options:
-        - label: "Я понимаю, что баги на мобильных лаунчерах и редких ОС зависят от самих лаунчеров и драйверов, но предоставляю инфо для анализа. / I understand that bugs on mobile launchers and rare OS depend on launchers/drivers themselves, but I provide info for analysis."
+        - label: "Я понимаю, что баги на мобильных лаунчерах и редких ОС зависят от лаунчеров и драйверов, но предоставляю инфо для анализа. / I understand that bugs on mobile launchers and rare OS depend on launchers/drivers themselves, but I provide info for analysis."
           required: true

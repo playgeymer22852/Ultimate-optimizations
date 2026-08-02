@@ -3,13 +3,6 @@ description: "Предложить новый загрузчик или верс
 title: "[Loader/Version Request / Запрос Загрузчика/Версии]: "
 labels: ["enhancement"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ### Добро пожаловать! / Welcome!
-        Спасибо, что помогаете развивать **Ultimate Optimizations**! Пожалуйста, заполните форму ниже.
-        Thank you for helping improve **Ultimate Optimizations**! Please fill out the form below.
-
   - type: checkboxes
     id: duplicate-check
     attributes:
@@ -35,7 +28,7 @@ body:
     id: specific-loader-details
     attributes:
       label: "🧩 Специфический загрузчик и форки модов / Specific Loader and Mod Forks"
-      description: "Если вы выбрали «Другой» или это редкий загрузчик (на котором, например, не работает Sodium и нужен определенный форк), напишите его название. Если вы знаете нужные аналоги модов — укажите их, это сильно ускорит понтирование в случае одобрения. / If you selected 'Other' or it is a rare loader (e.g., Sodium doesn't work and a specific fork is needed), please specify. If you know the required mod alternatives, list them here to speed up the porting process if approved."
+      description: "Если вы выбрали «Другой» или это редкий загрузчик (на котором, например, не работает Sodium и нужен определенный форк), напишите его название. Если вы знаете нужные аналоги модов — укажите их, это сильно ускорит портирование в случае одобрения. / If you selected 'Other' or it is a rare loader (e.g., Sodium doesn't work and a specific fork is needed), please specify. If you know the required mod alternatives, list them here to speed up the porting process if approved."
       placeholder: "Например: Название загрузчика, ссылка на форк Sodium или аналоги... / e.g., Loader name, link to Sodium fork or alternatives..."
     validations:
       required: false

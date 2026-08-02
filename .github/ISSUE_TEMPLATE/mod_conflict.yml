@@ -1,0 +1,47 @@
+name: "🔌 Конфликт или совместимость с вашими модами / Mod Conflict"
+description: "Если вы добавили свой мод в сборку, и игра начала вылетать или конфликтовать / If you added your own mod and the game crashes or conflicts"
+title: "[Mod Conflict / Конфликт Модов]: "
+labels: ["compatibility"]
+body:
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: "🔄 Проверка дубликатов / Duplicate Check"
+      options:
+        - label: "Я проверил(а) список существующих тем, похожей проблемы еще нет. / I have checked the existing issues, and this is not a duplicate."
+          required: true
+
+  - type: input
+    id: added-mod-name
+    attributes:
+      label: "➕ Название добавленного мода / Name of the Added Mod"
+      description: "Укажите точное название и версию мода, который вы установили самостоятельно. / Specify the exact name and version of the mod you installed yourself."
+      placeholder: "Например: JourneyMap 1.21-6.0.0... / e.g., JourneyMap 1.21-6.0.0..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: conflict-description
+    attributes:
+      label: "📝 Описание конфликта / Description of the Conflict"
+      description: "Что именно происходит при добавлении этого мода? (Игра вылетает при запуске, падает FPS, ломается интерфейс). / What exactly happens when you add this mod? (Game crashes on startup, FPS drops, UI breaks)."
+      placeholder: "Опишите проблему... / Describe the issue..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: crash-logs
+    attributes:
+      label: "📋 Логи конфликта или краш-репорт / Conflict Logs or Crash Report"
+      description: "Пожалуйста, прикрепите содержимое файлов `latest.log` или `crash-report`. Вы можете просто перетащить файл сюда. / Please attach the contents of `latest.log` or `crash-report`. You can drag and drop files here."
+      placeholder: "Вставьте ваши логи сюда... / Paste your logs here..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: patience-agree
+    attributes:
+      label: "⏳ Подтверждение / Confirmation"
+      options:
+        - label: "Я понимаю, что разработчик сборки не обязан адаптировать её под все сторонние моды, но предоставляю инфо для анализа. / I understand that the pack developer is not required to adapt it to all third-party mods, but I provide info for analysis."
+          required: true

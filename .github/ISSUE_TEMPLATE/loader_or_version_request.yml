@@ -15,9 +15,7 @@ body:
     attributes:
       label: "🔄 Проверка дубликатов / Duplicate Check"
       options:
-        - label: "[RU] Я проверил(а) список существующих запросов, похожих предложений ещё нет."
-          required: true
-        - label: "[EN] I have checked the existing issues and requests, and this is not a duplicate."
+        - label: "Я проверил(а) список существующих запросов, похожих предложений еще нет. / I have checked the existing issues and requests, and this is not a duplicate."
           required: true
 
   - type: dropdown
@@ -29,9 +27,18 @@ body:
         - "Quilt"
         - "NeoForge"
         - "Fabric"
-        - "Другой / Other (укажите ниже / specify below)"
+        - "Другой / Other"
     validations:
       required: true
+
+  - type: textarea
+    id: specific-loader-details
+    attributes:
+      label: "🧩 Специфический загрузчик и форки модов / Specific Loader and Mod Forks"
+      description: "Если вы выбрали «Другой» или это редкий загрузчик (на котором, например, не работает Sodium и нужен определенный форк), напишите его название. Если вы знаете нужные аналоги модов — укажите их, это сильно ускорит портирование в случае одобрения. / If you selected 'Other' or it is a rare loader (e.g., Sodium doesn't work and a specific fork is needed), please specify. If you know the required mod alternatives, list them here to speed up the porting process if approved."
+      placeholder: "Например: Название загрузчика, ссылка на форк Sodium или аналоги... / e.g., Loader name, link to Sodium fork or alternatives..."
+    validations:
+      required: false
 
   - type: input
     id: game-version
@@ -63,9 +70,7 @@ body:
   - type: checkboxes
     id: patience-agree
     attributes:
-      label: "⏳ Готовность к ожиданию / Readiness to Wait"
+      label: "⏳ Подтверждение и готовность к ожиданию / Confirmation and Readiness to Wait"
       options:
-        - label: "[RU] Я понимаю, что портирование сборки — это сложный процесс, требующий много времени. Я готов(а) ждать, если разработчик одобрит это предложение."
-          required: true
-        - label: "[EN] I understand that porting the modpack is a complex and time-consuming process. I am willing to wait if the developer accepts this request."
+        - label: "Я понимаю, что портирование сборки на новый загрузчик или версию — это сложный процесс, требующий много времени. Я готов(а) ждать, если разработчик одобрит это предложение. / I understand that porting the modpack is a complex and time-consuming process. I am willing to wait if the developer accepts this request."
           required: true

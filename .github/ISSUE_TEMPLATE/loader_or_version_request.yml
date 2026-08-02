@@ -1,71 +1,71 @@
-name: "🚀 Request Loader / Version | Запрос загрузчика / версии"
-description: "Suggest a new mod loader or game version | Предложить новый загрузчик или версию"
-title: "[Request / Запрос]: "
+name: "🚀 Запрос загрузчика / версии | Request Loader / Version"
+description: "Предложить новый загрузчик или версию | Suggest a new mod loader or game version"
+title: "[Запрос / Request]: "
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### Welcome! / Добро пожаловать!
-        Thank you for helping improve **Ultimate Optimizations**! Please fill out the form below.
+        ### Добро пожаловать! / Welcome!
         Спасибо, что помогаете развивать **Ultimate Optimizations**! Пожалуйста, заполните форму ниже.
+        Thank you for helping improve **Ultimate Optimizations**! Please fill out the form below.
 
   - type: checkboxes
     id: duplicate-check
     attributes:
-      label: "🔄 Duplicate Check / Проверка дубликатов"
+      label: "🔄 Проверка дубликатов / Duplicate Check"
       options:
-        - label: "[EN] I have checked the existing issues and requests, and this is not a duplicate."
-          required: true
         - label: "[RU] Я проверил(а) список существующих запросов, похожих предложений ещё нет."
+          required: true
+        - label: "[EN] I have checked the existing issues and requests, and this is not a duplicate."
           required: true
 
   - type: dropdown
     id: loader-choice
     attributes:
-      label: "📦 Desired Mod Loader / Желаемый загрузчик модов"
-      description: "Select the platform you want to see / Выберите платформу, которую хотите видеть."
+      label: "📦 Желаемый загрузчик модов / Desired Mod Loader"
+      description: "Выберите платформу, которую хотите видеть / Select the platform you want to see."
       options:
         - "Quilt"
         - "NeoForge"
         - "Fabric"
-        - "Other / Другой (specify below / укажите ниже)"
+        - "Другой / Other (укажите ниже / specify below)"
     validations:
       required: true
 
   - type: input
     id: game-version
     attributes:
-      label: "🎮 Game Version / Версия игры"
-      description: "Which version of Minecraft are you requesting? / Какую версию Minecraft вы хотите?"
-      placeholder: "e.g. 26.2, 26.3, 1.21..."
+      label: "🎮 Версия игры / Game Version"
+      description: "Какую версию Minecraft вы хотите? / Which version of Minecraft are you requesting?"
+      placeholder: "Например: 26.2, 26.3, 1.21... / e.g. 26.2, 26.3, 1.21..."
     validations:
       required: true
 
   - type: textarea
     id: why-needed
     attributes:
-      label: "❓ Why is this change necessary? / Почему это необходимо?"
-      description: "Explain why the pack needs this loader or update / Опишите, почему сборке нужен этот загрузчик или переход."
-      placeholder: "Write your reason here... / Напишите вашу причину здесь..."
+      label: "❓ Почему это необходимо? / Why is this change necessary?"
+      description: "Опишите, почему сборке нужен этот загрузчик или переход / Explain why the pack needs this loader or update."
+      placeholder: "Напишите вашу причину здесь... / Write your reason here..."
     validations:
       required: true
 
   - type: textarea
     id: expectations
     attributes:
-      label: "✨ What do you expect from this change? / Чего вы ожидаете от этого изменения?"
-      description: "What are the benefits? (e.g. better performance) / Какие плюсы это даст? (например, выше FPS)"
-      placeholder: "Your expectations... / Ваши ожидания..."
+      label: "✨ Чего вы ожидаете от этого изменения? / What do you expect from this change?"
+      description: "Какие плюсы это даст? (например, выше FPS) / What are the benefits? (e.g. better performance)"
+      placeholder: "Ваши ожидания... / Your expectations..."
     validations:
       required: true
 
   - type: checkboxes
     id: patience-agree
     attributes:
-      label: "⏳ Readiness to Wait / Готовность к ожиданию"
+      label: "⏳ Готовность к ожиданию / Readiness to Wait"
       options:
-        - label: "[EN] I understand that porting the modpack is a complex and time-consuming process. I am willing to wait if the developer accepts this request."
-          required: true
         - label: "[RU] Я понимаю, что портирование сборки — это сложный процесс, требующий много времени. Я готов(а) ждать, если разработчик одобрит это предложение."
+          required: true
+        - label: "[EN] I understand that porting the modpack is a complex and time-consuming process. I am willing to wait if the developer accepts this request."
           required: true

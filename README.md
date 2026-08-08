@@ -49,7 +49,6 @@ ________________________________________________________________________________
 | ⚡ **Medium Core** | Средние ПК и ноутбуки | **500 – 1000 FPS** | Для комфортного гейминга без лагов и фризов на оптимальных настройках. |
 | 🛡️ **Budget / Office** | Слабые ПК и старые ноутбуки | **120 – 300 FPS** | Спасательный круг для калькуляторов. Стабильный и плавный FPS даже на слабом железе. |
 
-
 ### 🔗 Полезные ссылки
 
 * 🟩 **[СТРАНИЦА НА MODRINTH](https://modrinth.com/modpack/ultimate-optimizations)** — Скачать актуальную и чистую версию сборки.
@@ -102,10 +101,14 @@ _**Ultimate Optimizations** — это бескомпромиссный инст
 ---
 
 ### 💻 Who is this pack for?
-1. **Owners of weak PCs and laptops:** To achieve stable and smooth 100-180+ FPS without CPU overheating.
-2. **Owners of powerful gaming systems:** To unlock high-refresh-rate monitors (144Hz/240Hz/360Hz) and play at extreme render distances (32+ chunks) with ultra-shaders.
 
----
+The **Ultimate-optimizations** pack is designed for players with any hardware configuration and is divided into three performance tiers.
+
+| PC Tier | Hardware | Expected FPS | Target Audience |
+| :--- | :--- | :--- | :--- |
+| 🔥 **Ultimate Gaming** | High-end gaming PCs | **1800 – 2500+ FPS** | For esports players and ultra-high refresh rate monitors. Maximum performance. |
+| ⚡ **Medium Core** | Mid-range PCs & Laptops | **500 – 1000 FPS** | For smooth gaming without lags and stutters on optimal settings. |
+| 🛡️ **Budget / Office** | Low-end PCs & Old Laptops | **120 – 300 FPS** | A lifesaver for weak systems. Stable and fluid FPS even on low-end hardware. |
 
 ### 🔗 Quick Links
 
